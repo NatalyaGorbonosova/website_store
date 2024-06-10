@@ -1,0 +1,110 @@
+@import 'vars';
+.footer {
+    background-color: #222224;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 34px;
+    padding-bottom: 23px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.text_footer {
+    color: #FBFBFB;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.icons_footer{
+    display: flex;
+    gap: 8px;
+}
+
+.icon_white_squer {
+    width: 31.451px;
+    height: 32px;
+    background-color: #FFF;
+    padding: 5px;
+    transition: 0.3s linear;
+}
+
+.icon_white_squer:hover {
+    background-color: #F16D7F;
+    }
+
+.icon_white_squer:hover path{
+    fill: #FFF;
+}
+
+.subscribe {
+    width: 30vw;
+}
+
+.subscribe_title {
+    color: #222224;
+    text-align: center;
+    font-family: Lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 167.2%; /* 40.128px */
+}
+
+.subscribe_subtitle {
+    color: #222224;
+    text-align: center;
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 167.2%;
+}
+ 
+.subscribe_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 32px;
+}
+
+.subscribe_form {
+    color: #222224;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.671;
+    width: 256px;
+    height: 49px;
+    background-color: #E1E1E1;
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px 0 0 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+
+.button_subscribe {
+    display: flex;
+    width: 85px;
+    height: 49px;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFF;
+    text-align: center;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 0 20px 20px 0;
+    background-color:  #F16D7F;
+}

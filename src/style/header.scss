@@ -1,0 +1,110 @@
+@import 'vars';
+
+.header {
+    background-color: $backBlock;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 41px;
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: $gapSite;
+    }
+
+      
+}
+
+.burger-icon:hover path{
+    fill: $colorSelect;
+    
+}
+.man-icon:hover path{
+    fill: $colorSelect;
+    
+}
+.basket-icon:hover path{
+    fill: $colorSelect;
+    
+}
+
+#burger {
+    position: absolute;
+    z-index: -1;
+    
+    &:checked ~ .nav {
+        
+        right: -232px;
+        
+        
+    }
+}
+
+.nav {
+    background: #fff;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    width: 232px;
+    padding: 32px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 81px;
+    right: 0;
+    transition: right 0.3s;
+    z-index: 1;
+    
+    
+    
+}
+
+.burger-menu {
+    color: $colorSelect;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    list-style-type: none;
+    overflow: hidden;
+    
+    &__ul {
+        list-style-type: none;
+        
+    }
+    &__li {
+        list-style-type: none;
+        margin-bottom: 24px;
+    }
+    &__li:first-child .burger-menu__name {
+        color: #000;
+        font-weight: 700;
+        
+
+    }
+    &__name {
+        color: $colorSelect;
+               
+        
+    }
+    &__items {
+        color: #6F6E6E;
+        padding-left: 16px;
+               
+    }
+    &__li-item {
+        
+        margin-bottom: 8px;
+    }
+}
