@@ -2,11 +2,11 @@ import '../src/style/style.scss';
 import { Helmet } from "react-helmet";
 
 import MainPage from './components/MainPage';
-import Header from './components/header';
+
 import CatalogPage from './components/CatalogPage';
 import RegistrationPage from './components/RegistrationPage';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import CardPage from './components/CardPage';
+import CartPage from './components/CartPage';
 
 function App() {
   return (
@@ -22,9 +22,9 @@ function App() {
         <div className='contenr center'>
           <Router>
             <Routes>
-              <Route path='/' element={<MainPage />}></Route>
+              <Route path='/' element={<MainPage exact />}></Route>
               <Route path='/catalog' element={<CatalogPage />} />
-              <Route path='/card' element={<CardPage />} />
+              <Route path='/card' element={<CartPage />} />
               <Route path='/registration' element={<RegistrationPage />} />
             </Routes>
           </Router>

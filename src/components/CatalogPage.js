@@ -1,16 +1,18 @@
 import Footer from "./footer";
 import Header from "./header";
-import { catalogData, cartItemsData} from "./productsData";
+import { cartItemsData} from "./productsData";
 import ProductItem from "./productItem";
 import { useEffect, useState } from "react";
 
-
+function pagination(array, pageSize, pageNumber) {
+    return array.slice((pageNumber - 1) * pageSize, pageNumber * pageSize);
+  }
 
 function CatalogPage() {
-    
-    const [selectedSize, setSelectedSize] = useState([]);
-    const selectProducts = cartItemsData.filter(product => (selectedSize.length === 0 ||selectedSize.includes(product.size)))
+    const [currentPage, setCurrentPage] = useState(1);
+    const pageSize = 9;
 
+    const [selectedSize, setSelectedSize] = useState([]);
 
     const handleSizeChange = (size) => {
         
@@ -22,6 +24,21 @@ function CatalogPage() {
         }
         
       };
+      const displayedProducts = pagination(
+        cartItemsData.filter(
+          (product) =>
+            // Фильтрация по размерам: отображаем только те товары, которые имеют хотя бы один из выбранных размеров
+            selectedSize.length === 0 || selectedSize.includes(product.size)
+        ),
+        pageSize,
+        currentPage
+      );
+     /*  const totalPages = Math.ceil(
+        cartItemsData.filter(
+          (product) =>
+            selectedSize.length === 0 || selectedSize.includes(product.size)
+        ).length / pageSize
+      ); */
 
     return ( 
         <div>
@@ -146,7 +163,7 @@ function CatalogPage() {
                 </div>
                 <section className="catalog center">
                     <div className="catalog-block">
-                    {selectProducts.map((item) => (
+                    {displayedProducts.map((item) => (
                         <ProductItem 
                             key={item.id}
                             id={item.id}

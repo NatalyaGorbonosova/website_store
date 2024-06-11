@@ -12,9 +12,7 @@ import Footer from "./footer";
 import '../style/style.scss'
 
 function MainPage() {
-    
-    console.log(catalogData[0].id);
-   
+      
     return ( 
         <div>
             <Header />

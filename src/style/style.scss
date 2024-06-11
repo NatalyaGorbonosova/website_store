@@ -7,7 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     outline: none;
-    /* outline-offset: 0px; */
+    outline-offset: 0px;
     
 }
 
@@ -873,13 +873,15 @@ summary {
     }
 
     &__btn {
-        color: #000;
+        color: #222;
         font-size: 14px;
+        font-family: Lato;
         font-style: normal;
         font-weight: 300;
         line-height: normal;
         padding: 16px 40px;
         border: #A4A4A4 1px solid;
+        background-color: #fff;
     }
 
     &__right {
@@ -954,7 +956,7 @@ summary {
     background-color:#F5F3F3;
     padding: 40px 44px;
     &__button {
-        padding: 16px 40px;
+        padding: 16px 20px;
     }
 
     &__sub-total {
