@@ -4,14 +4,17 @@ import ReactDOM from 'react-dom/client';
 import './style/style.css'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import CartContextProvider from './context/CartContext';
+
+import { Provider } from 'react-redux';
+import { store } from './redux/cartSlice';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <CartContextProvider>
+    <Provider store={store}>
       <App />
-    </CartContextProvider>
+    </Provider>
+    
     
   </React.StrictMode>
 );

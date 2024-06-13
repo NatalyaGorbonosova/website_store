@@ -12,8 +12,9 @@ const CartContextProvider = (props) => {
 
   // Функция добавления товара в корзину по его id
   const addToCart = (productId) => {
-    console.log('addtocart done');
+    
     setCartItems((prevCartItems) => {
+      console.log(prevCartItems);
       // Проверка наличия товар с таким id в корзине
       const existingItem = prevCartItems.find((item) => item.id === productId);
       if (existingItem) {
@@ -27,6 +28,7 @@ const CartContextProvider = (props) => {
         // Если товара не было в корзине, такой добавляется в корзину в количестве 1.
         return [...prevCartItems, { id: productId, quantity: 1 }];
       }
+      
     });
   };
 

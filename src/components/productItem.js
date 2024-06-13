@@ -1,13 +1,15 @@
 import {ReactComponent as AddToCard} from '../img/addToCard.svg';
 import React, { useContext } from "react";
-import { CartContext } from "../context/CartContext";
+
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../redux/cartSlice';
 
 function ProductItem( { id, title, imgUrl, text, price, main }) {
-    const { addToCart } = useContext(CartContext);
+    const dispatch = useDispatch();
 
     const handleAddToCart = () => {
-        addToCart(id);
-    };
+        dispatch(addToCart({id}));
+    }
     
     return ( 
         <a className="catalog__link">

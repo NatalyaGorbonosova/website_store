@@ -2,17 +2,17 @@ import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
 import header_logo from "../img/logo.svg";
 import '../style/style.scss';
-import { CartContext } from '../context/CartContext';
+import { useSelector } from 'react-redux';
 
 function Header() {
     const arrayManItems = ['Accessories', 'Bags', 'Denim', 'T-Shirts'];
     const arrayWomenItems = ['Accessories', 'Jackets & Coats', 'Polos', 'Shirts', 'T-Shirts'];
     const arrayKidsItems =['Accessories', 'Jackets & Coats', 'Polos', 'Shirts', 'T-Shirts', 'Bags'];
-    const { cartItems } = useContext(CartContext);
+    const cartItems = useSelector((state) => state.cart.cartItems);
     const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
 
     return ( 
-        <header className='header center'>
+        <header className='header'>
              <div class="header__left">
                 <Link className='logo' to="/">
                     <img src={header_logo} alt='logo' />
