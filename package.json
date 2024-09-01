@@ -1,7 +1,7 @@
 {
   "name": "homework8",
   "version": "0.1.0",
-  "homepage": "https://github.com/NatalyaGorbonosova/website_store",
+  "homepage": "https://NatalyaGorbonosova.github.io/website_store",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.5",
